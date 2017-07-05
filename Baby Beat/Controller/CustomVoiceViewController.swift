@@ -12,6 +12,9 @@ import UIKit
 class CustomVoiceViewController: UIViewController {
     @IBOutlet weak var silderDepth: CustomSlider!
 
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var sliderAmplyfy: CustomSlider!
     @IBOutlet weak var sliderExtraction: CustomSlider!
     @IBOutlet weak var sliderCrystallize: CustomSlider!

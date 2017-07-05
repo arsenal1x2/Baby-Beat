@@ -309,6 +309,9 @@
                                             <constraint firstAttribute="height" constant="30" id="fIs-gu-rF7"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="back.png"/>
+                                        <connections>
+                                            <action selector="back:" destination="Ul7-6a-1bl" eventType="touchUpInside" id="dcu-ha-bAk"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finetune Hearbirth" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dw-ZF-2lu">
                                         <rect key="frame" x="103.66666666666666" y="0.0" width="171.33333333333334" height="61"/>

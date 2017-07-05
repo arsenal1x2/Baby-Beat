@@ -55,6 +55,10 @@ class HomeViewController: UIViewController {
             showListMyRecord()
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        initView()
+    }
 }
 extension HomeViewController{
     
