@@ -24,6 +24,9 @@ class HomeViewController: UIViewController {
         setView(view: superView, hidden: false)
         setView(view: viewTutorial, hidden: true)
     }
+    @IBAction func tabToRecord(_ sender: Any) {
+        moveToChageVoice()
+    }
    
     override func viewDidLoad() {
          self.navigationController?.navigationBar.isHidden = true
@@ -41,9 +44,7 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func tabToRecord(_ sender: Any) {
-        moveToChageVoice()
-    }
+    
     @IBAction func showMyRecorded(_ sender: Any) {
         if(listRecorted.count == 0){
             let alert:UIAlertController = UIAlertController(title: "MyRecordings folder is empty!", message: "", preferredStyle: .alert)
@@ -87,7 +88,7 @@ extension HomeViewController{
     func moveToChageVoice(){
        // self.navigationController?.pushViewController(vc, animated: true)
         let vc = storyboard?.instantiateViewController(withIdentifier: "secondViewController") as! CustomVoiceViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.present(vc,animated: true,completion: nil)
     }
     func addScrollView(){
         let imageWidth:CGFloat = self.view.frame.size.width
