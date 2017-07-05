@@ -76,6 +76,9 @@
                                                     <constraint firstAttribute="width" constant="109" id="Ge5-qs-62G"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="my recording.png"/>
+                                                <connections>
+                                                    <action selector="showMyRecorded:" destination="BYZ-38-t0r" eventType="touchUpInside" id="REJ-BD-Opu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dk-di-how">
                                                 <rect key="frame" x="177" y="22" width="102" height="34"/>
@@ -85,7 +88,7 @@
                                                 </constraints>
                                                 <state key="normal" title="How to recỏding"/>
                                                 <connections>
-                                                    <action selector="showTutorialView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcc-hy-RBd"/>
+                                                    <action selector="showViewTutorial:" destination="BYZ-38-t0r" eventType="touchUpInside" id="crc-df-ULr"/>
                                                 </connections>
                                             </button>
                                         </subviews>

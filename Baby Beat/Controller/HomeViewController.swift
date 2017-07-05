@@ -10,56 +10,41 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var uiscrollview: UIScrollView!
-    
     @IBOutlet weak var buttonHowToRecord: UIButton!
     @IBOutlet weak var buttonMyRecord: UIButton!
     @IBOutlet weak var viewTutorial: UIView!
-  
-    @IBAction func closeViewTutorial(_ sender: Any) {
-    }
     @IBOutlet weak var buttontabToRecord: UIButton!
-  
     @IBOutlet weak var superView: UIView!
-    //var WaveAnimationView:UIView!
-    
     var listRecorted:[String] = [String]()
+    @IBAction func showViewTutorial(_ sender: Any) {
+        setView(view: superView, hidden: true)
+        setView(view: viewTutorial, hidden: false)
+    }
+    @IBAction func closeViewTutorial(_ sender: Any) {
+        setView(view: superView, hidden: false)
+        setView(view: viewTutorial, hidden: true)
+    }
+   
     override func viewDidLoad() {
          self.navigationController?.navigationBar.isHidden = true
         initView()
-        // initViewTutorial()
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
         self.navigationController?.navigationBar.isHidden = true
         addScrollView()
-        
-       // initViewTutorial()
     }
-    @IBAction func showTutorialView(_ sender: Any) {
-        setView(view: superView, hidden: true)
-        setView(view: viewTutorial, hidden: false)
-    }
-    
     @IBOutlet weak var imageBackground: UIImageView!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     @IBAction func tabToRecord(_ sender: Any) {
-        
-       moveToChageVoice()
+        moveToChageVoice()
     }
-    @IBOutlet weak var viewTabbar: UIView!
-    
-    
-    
-  
-    @IBAction func showMyRecord(_ sender: Any) {
+    @IBAction func showMyRecorded(_ sender: Any) {
         if(listRecorted.count == 0){
             let alert:UIAlertController = UIAlertController(title: "MyRecordings folder is empty!", message: "", preferredStyle: .alert)
             let buttonOk:UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -151,8 +136,8 @@ extension HomeViewController{
         label2.frame.origin.y = yPosition
         uiscrollview.addSubview(label2)
         
-        scrollViewContentSize += imageHeight + 10 - 20
-        yPosition += imageHeight + 10 - 20
+        scrollViewContentSize += imageHeight + 10
+        yPosition += imageHeight + 10
         uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
         // add image view
         let myImage:UIImage = UIImage(named: "baby.png")!
@@ -165,8 +150,8 @@ extension HomeViewController{
         myImageView.frame.origin.y = yPosition
         uiscrollview.addSubview(myImageView)
         
-        yPosition += imageHeight + spacer - 20
-        scrollViewContentSize += imageHeight +  spacer - 20
+        yPosition += imageHeight + spacer
+        scrollViewContentSize += imageHeight +  spacer
         uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
         //add label 3
         label3.text = "if you don't hear your baby heart beat try other positions."
@@ -179,8 +164,8 @@ extension HomeViewController{
         label3.frame.origin.y = yPosition
         uiscrollview.addSubview(label3)
         
-        scrollViewContentSize += imageHeight + 10 - 20
-        yPosition += 100 + 10 - 20
+        scrollViewContentSize += imageHeight + 10
+        yPosition += 100 + 20
         uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
         //add image 1
         let myImage1:UIImage = UIImage(named: "born.png")!
@@ -193,8 +178,8 @@ extension HomeViewController{
         myImageView1.frame.origin.y = yPosition
         uiscrollview.addSubview(myImageView1)
         
-        yPosition += 350 + spacer - 20
-        scrollViewContentSize += imageHeight +  spacer - 20
+        yPosition += 350 + spacer
+        scrollViewContentSize += imageHeight +  spacer
         uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
         //add label 4
         label4.text = "If you still can't hear your baby heartbeat don't worry it doesn't mean anything is wrong with your baby. Wait for someday and try again to record."
