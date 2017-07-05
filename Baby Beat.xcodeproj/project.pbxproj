@@ -11,25 +11,27 @@
 		86979BB51F09D7EA00F0E5B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86979BB41F09D7EA00F0E5B3 /* Assets.xcassets */; };
 		86979BB81F09D7EA00F0E5B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86979BB61F09D7EA00F0E5B3 /* LaunchScreen.storyboard */; };
 		86979BC11F09D92300F0E5B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979BC01F09D92300F0E5B3 /* HomeViewController.swift */; };
-		86979BD01F09E7C900F0E5B3 /* Background @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BC41F09E7C900F0E5B3 /* Background @2x.png */; };
-		86979BD11F09E7C900F0E5B3 /* Background @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BC51F09E7C900F0E5B3 /* Background @3x.png */; };
-		86979BD21F09E7C900F0E5B3 /* background_tab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BC61F09E7C900F0E5B3 /* background_tab@2x.png */; };
-		86979BD31F09E7C900F0E5B3 /* How to record.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BC71F09E7C900F0E5B3 /* How to record.png */; };
-		86979BD41F09E7C900F0E5B3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BC81F09E7C900F0E5B3 /* logo.png */; };
-		86979BD51F09E7C900F0E5B3 /* Mom @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BC91F09E7C900F0E5B3 /* Mom @2x.png */; };
-		86979BD61F09E7C900F0E5B3 /* Mom @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BCA1F09E7C900F0E5B3 /* Mom @3x.png */; };
-		86979BD71F09E7C900F0E5B3 /* My recording.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BCB1F09E7C900F0E5B3 /* My recording.png */; };
-		86979BD81F09E7C900F0E5B3 /* song @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BCC1F09E7C900F0E5B3 /* song @2x.png */; };
-		86979BD91F09E7C900F0E5B3 /* song @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BCD1F09E7C900F0E5B3 /* song @3x.png */; };
-		86979BDA1F09E7C900F0E5B3 /* TabbarBG @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BCE1F09E7C900F0E5B3 /* TabbarBG @2x.png */; };
-		86979BDB1F09E7C900F0E5B3 /* TabbarBG @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BCF1F09E7C900F0E5B3 /* TabbarBG @3x.png */; };
 		86979BE01F0A013900F0E5B3 /* ViewTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979BDF1F0A013900F0E5B3 /* ViewTutorial.swift */; };
-		86979BE21F0A258900F0E5B3 /* 19859149_695186967331126_1541081074_o.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BE11F0A258900F0E5B3 /* 19859149_695186967331126_1541081074_o.png */; };
 		86979BE41F0A2BEF00F0E5B3 /* CustomVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979BE31F0A2BEF00F0E5B3 /* CustomVoiceViewController.swift */; };
 		86979BE61F0A360D00F0E5B3 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979BE51F0A360D00F0E5B3 /* CustomSlider.swift */; };
 		86979BE81F0A3E8800F0E5B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86979BE71F0A3E8800F0E5B3 /* Main.storyboard */; };
-		86979BEA1F0A506700F0E5B3 /* 19239799_695214173995072_1469657494_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BE91F0A506700F0E5B3 /* 19239799_695214173995072_1469657494_n.png */; };
-		86979BEC1F0A540700F0E5B3 /* 19691289_695244700658686_1442697958_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 86979BEB1F0A540700F0E5B3 /* 19691289_695244700658686_1442697958_n.png */; };
+		86BE312E1F0C794E0011AD7A /* baby.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31201F0C794E0011AD7A /* baby.png */; };
+		86BE312F1F0C794E0011AD7A /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31211F0C794E0011AD7A /* back.png */; };
+		86BE31301F0C794E0011AD7A /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31221F0C794E0011AD7A /* Background.png */; };
+		86BE31311F0C794E0011AD7A /* backgroundtabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31231F0C794E0011AD7A /* backgroundtabbar.png */; };
+		86BE31321F0C794E0011AD7A /* born.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31241F0C794E0011AD7A /* born.png */; };
+		86BE31331F0C794E0011AD7A /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31251F0C794E0011AD7A /* heart.png */; };
+		86BE31341F0C794E0011AD7A /* howtorecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31261F0C794E0011AD7A /* howtorecord.png */; };
+		86BE31351F0C794E0011AD7A /* like.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31271F0C794E0011AD7A /* like.gif */; };
+		86BE31361F0C794E0011AD7A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31281F0C794E0011AD7A /* logo.png */; };
+		86BE31371F0C794E0011AD7A /* mom.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31291F0C794E0011AD7A /* mom.png */; };
+		86BE31381F0C794E0011AD7A /* my recording.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE312A1F0C794E0011AD7A /* my recording.png */; };
+		86BE31391F0C794E0011AD7A /* saveandshare.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE312B1F0C794E0011AD7A /* saveandshare.png */; };
+		86BE313A1F0C794E0011AD7A /* tabtorecord.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE312C1F0C794E0011AD7A /* tabtorecord.png */; };
+		86BE313B1F0C794E0011AD7A /* taptostop.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE312D1F0C794E0011AD7A /* taptostop.png */; };
+		86BE313D1F0C7B360011AD7A /* resettodefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE313C1F0C7B360011AD7A /* resettodefault.png */; };
+		86BE31401F0C7F8E0011AD7A /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */; };
+		86BE31441F0C89AA0011AD7A /* 19859149_695186967331126_1541081074_o.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31431F0C89A90011AD7A /* 19859149_695186967331126_1541081074_o.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,25 +41,27 @@
 		86979BB71F09D7EA00F0E5B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86979BB91F09D7EA00F0E5B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86979BC01F09D92300F0E5B3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		86979BC41F09E7C900F0E5B3 /* Background @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background @2x.png"; sourceTree = "<group>"; };
-		86979BC51F09E7C900F0E5B3 /* Background @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background @3x.png"; sourceTree = "<group>"; };
-		86979BC61F09E7C900F0E5B3 /* background_tab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background_tab@2x.png"; sourceTree = "<group>"; };
-		86979BC71F09E7C900F0E5B3 /* How to record.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "How to record.png"; sourceTree = "<group>"; };
-		86979BC81F09E7C900F0E5B3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		86979BC91F09E7C900F0E5B3 /* Mom @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mom @2x.png"; sourceTree = "<group>"; };
-		86979BCA1F09E7C900F0E5B3 /* Mom @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mom @3x.png"; sourceTree = "<group>"; };
-		86979BCB1F09E7C900F0E5B3 /* My recording.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "My recording.png"; sourceTree = "<group>"; };
-		86979BCC1F09E7C900F0E5B3 /* song @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "song @2x.png"; sourceTree = "<group>"; };
-		86979BCD1F09E7C900F0E5B3 /* song @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "song @3x.png"; sourceTree = "<group>"; };
-		86979BCE1F09E7C900F0E5B3 /* TabbarBG @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabbarBG @2x.png"; sourceTree = "<group>"; };
-		86979BCF1F09E7C900F0E5B3 /* TabbarBG @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TabbarBG @3x.png"; sourceTree = "<group>"; };
 		86979BDF1F0A013900F0E5B3 /* ViewTutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewTutorial.swift; sourceTree = "<group>"; };
-		86979BE11F0A258900F0E5B3 /* 19859149_695186967331126_1541081074_o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19859149_695186967331126_1541081074_o.png; sourceTree = "<group>"; };
 		86979BE31F0A2BEF00F0E5B3 /* CustomVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomVoiceViewController.swift; sourceTree = "<group>"; };
 		86979BE51F0A360D00F0E5B3 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		86979BE71F0A3E8800F0E5B3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		86979BE91F0A506700F0E5B3 /* 19239799_695214173995072_1469657494_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19239799_695214173995072_1469657494_n.png; sourceTree = "<group>"; };
-		86979BEB1F0A540700F0E5B3 /* 19691289_695244700658686_1442697958_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19691289_695244700658686_1442697958_n.png; sourceTree = "<group>"; };
+		86BE31201F0C794E0011AD7A /* baby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby.png; sourceTree = "<group>"; };
+		86BE31211F0C794E0011AD7A /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		86BE31221F0C794E0011AD7A /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		86BE31231F0C794E0011AD7A /* backgroundtabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundtabbar.png; sourceTree = "<group>"; };
+		86BE31241F0C794E0011AD7A /* born.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = born.png; sourceTree = "<group>"; };
+		86BE31251F0C794E0011AD7A /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		86BE31261F0C794E0011AD7A /* howtorecord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = howtorecord.png; sourceTree = "<group>"; };
+		86BE31271F0C794E0011AD7A /* like.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = like.gif; sourceTree = "<group>"; };
+		86BE31281F0C794E0011AD7A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		86BE31291F0C794E0011AD7A /* mom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mom.png; sourceTree = "<group>"; };
+		86BE312A1F0C794E0011AD7A /* my recording.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "my recording.png"; sourceTree = "<group>"; };
+		86BE312B1F0C794E0011AD7A /* saveandshare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveandshare.png; sourceTree = "<group>"; };
+		86BE312C1F0C794E0011AD7A /* tabtorecord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabtorecord.png; sourceTree = "<group>"; };
+		86BE312D1F0C794E0011AD7A /* taptostop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taptostop.png; sourceTree = "<group>"; };
+		86BE313C1F0C7B360011AD7A /* resettodefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resettodefault.png; sourceTree = "<group>"; };
+		86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
+		86BE31431F0C89A90011AD7A /* 19859149_695186967331126_1541081074_o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19859149_695186967331126_1541081074_o.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +94,9 @@
 		86979BAC1F09D7EA00F0E5B3 /* Baby Beat */ = {
 			isa = PBXGroup;
 			children = (
+				86BE313E1F0C7F740011AD7A /* Helper */,
+				86BE311F1F0C794E0011AD7A /* Images */,
 				86979BDC1F0A00C800F0E5B3 /* View */,
-				86979BC31F09E7C900F0E5B3 /* Images */,
 				86979BBF1F09D91300F0E5B3 /* Controller */,
 				86979BE71F0A3E8800F0E5B3 /* Main.storyboard */,
 				86979BAD1F09D7EA00F0E5B3 /* AppDelegate.swift */,
@@ -111,28 +116,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		86979BC31F09E7C900F0E5B3 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				86979BC41F09E7C900F0E5B3 /* Background @2x.png */,
-				86979BC51F09E7C900F0E5B3 /* Background @3x.png */,
-				86979BC61F09E7C900F0E5B3 /* background_tab@2x.png */,
-				86979BC71F09E7C900F0E5B3 /* How to record.png */,
-				86979BC81F09E7C900F0E5B3 /* logo.png */,
-				86979BC91F09E7C900F0E5B3 /* Mom @2x.png */,
-				86979BCA1F09E7C900F0E5B3 /* Mom @3x.png */,
-				86979BCB1F09E7C900F0E5B3 /* My recording.png */,
-				86979BEB1F0A540700F0E5B3 /* 19691289_695244700658686_1442697958_n.png */,
-				86979BCC1F09E7C900F0E5B3 /* song @2x.png */,
-				86979BE91F0A506700F0E5B3 /* 19239799_695214173995072_1469657494_n.png */,
-				86979BCD1F09E7C900F0E5B3 /* song @3x.png */,
-				86979BE11F0A258900F0E5B3 /* 19859149_695186967331126_1541081074_o.png */,
-				86979BCE1F09E7C900F0E5B3 /* TabbarBG @2x.png */,
-				86979BCF1F09E7C900F0E5B3 /* TabbarBG @3x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		86979BDC1F0A00C800F0E5B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +123,37 @@
 				86979BE51F0A360D00F0E5B3 /* CustomSlider.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		86BE311F1F0C794E0011AD7A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				86BE31201F0C794E0011AD7A /* baby.png */,
+				86BE31211F0C794E0011AD7A /* back.png */,
+				86BE31221F0C794E0011AD7A /* Background.png */,
+				86BE31231F0C794E0011AD7A /* backgroundtabbar.png */,
+				86BE31241F0C794E0011AD7A /* born.png */,
+				86BE31251F0C794E0011AD7A /* heart.png */,
+				86BE31261F0C794E0011AD7A /* howtorecord.png */,
+				86BE31271F0C794E0011AD7A /* like.gif */,
+				86BE31281F0C794E0011AD7A /* logo.png */,
+				86BE313C1F0C7B360011AD7A /* resettodefault.png */,
+				86BE31291F0C794E0011AD7A /* mom.png */,
+				86BE31431F0C89A90011AD7A /* 19859149_695186967331126_1541081074_o.png */,
+				86BE312A1F0C794E0011AD7A /* my recording.png */,
+				86BE312B1F0C794E0011AD7A /* saveandshare.png */,
+				86BE312C1F0C794E0011AD7A /* tabtorecord.png */,
+				86BE312D1F0C794E0011AD7A /* taptostop.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		86BE313E1F0C7F740011AD7A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +188,7 @@
 				TargetAttributes = {
 					86979BA91F09D7EA00F0E5B3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = NK3VLKM3DB;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -201,24 +216,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86979BD91F09E7C900F0E5B3 /* song @3x.png in Resources */,
-				86979BD61F09E7C900F0E5B3 /* Mom @3x.png in Resources */,
-				86979BDA1F09E7C900F0E5B3 /* TabbarBG @2x.png in Resources */,
-				86979BEC1F0A540700F0E5B3 /* 19691289_695244700658686_1442697958_n.png in Resources */,
-				86979BD71F09E7C900F0E5B3 /* My recording.png in Resources */,
-				86979BDB1F09E7C900F0E5B3 /* TabbarBG @3x.png in Resources */,
+				86BE31441F0C89AA0011AD7A /* 19859149_695186967331126_1541081074_o.png in Resources */,
+				86BE313D1F0C7B360011AD7A /* resettodefault.png in Resources */,
 				86979BB81F09D7EA00F0E5B3 /* LaunchScreen.storyboard in Resources */,
-				86979BD31F09E7C900F0E5B3 /* How to record.png in Resources */,
+				86BE31331F0C794E0011AD7A /* heart.png in Resources */,
+				86BE312F1F0C794E0011AD7A /* back.png in Resources */,
+				86BE312E1F0C794E0011AD7A /* baby.png in Resources */,
+				86BE31301F0C794E0011AD7A /* Background.png in Resources */,
+				86BE313B1F0C794E0011AD7A /* taptostop.png in Resources */,
+				86BE31321F0C794E0011AD7A /* born.png in Resources */,
+				86BE31381F0C794E0011AD7A /* my recording.png in Resources */,
 				86979BB51F09D7EA00F0E5B3 /* Assets.xcassets in Resources */,
-				86979BD41F09E7C900F0E5B3 /* logo.png in Resources */,
-				86979BD11F09E7C900F0E5B3 /* Background @3x.png in Resources */,
-				86979BD81F09E7C900F0E5B3 /* song @2x.png in Resources */,
+				86BE31371F0C794E0011AD7A /* mom.png in Resources */,
+				86BE31391F0C794E0011AD7A /* saveandshare.png in Resources */,
 				86979BE81F0A3E8800F0E5B3 /* Main.storyboard in Resources */,
-				86979BD21F09E7C900F0E5B3 /* background_tab@2x.png in Resources */,
-				86979BD51F09E7C900F0E5B3 /* Mom @2x.png in Resources */,
-				86979BE21F0A258900F0E5B3 /* 19859149_695186967331126_1541081074_o.png in Resources */,
-				86979BEA1F0A506700F0E5B3 /* 19239799_695214173995072_1469657494_n.png in Resources */,
-				86979BD01F09E7C900F0E5B3 /* Background @2x.png in Resources */,
+				86BE313A1F0C794E0011AD7A /* tabtorecord.png in Resources */,
+				86BE31361F0C794E0011AD7A /* logo.png in Resources */,
+				86BE31341F0C794E0011AD7A /* howtorecord.png in Resources */,
+				86BE31311F0C794E0011AD7A /* backgroundtabbar.png in Resources */,
+				86BE31351F0C794E0011AD7A /* like.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86979BE01F0A013900F0E5B3 /* ViewTutorial.swift in Sources */,
+				86BE31401F0C7F8E0011AD7A /* ExtensionUIColor.swift in Sources */,
 				86979BE61F0A360D00F0E5B3 /* CustomSlider.swift in Sources */,
 				86979BAE1F09D7EA00F0E5B3 /* AppDelegate.swift in Sources */,
 				86979BE41F0A2BEF00F0E5B3 /* CustomVoiceViewController.swift in Sources */,
@@ -348,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NK3VLKM3DB;
 				INFOPLIST_FILE = "Baby Beat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ahihi.ihaha.Baby-Beat";
@@ -360,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NK3VLKM3DB;
 				INFOPLIST_FILE = "Baby Beat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ahihi.ihaha.Baby-Beat";

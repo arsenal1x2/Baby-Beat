@@ -10,10 +10,14 @@ import UIKit
 
 
 class CustomVoiceViewController: UIViewController {
+    @IBOutlet weak var silderDepth: CustomSlider!
 
-    @IBOutlet weak var buttonBack: UIButton!
-    @IBOutlet weak var buttonSaveAndShare: UIButton!
+    @IBOutlet weak var sliderAmplyfy: CustomSlider!
+    @IBOutlet weak var sliderExtraction: CustomSlider!
+    @IBOutlet weak var sliderCrystallize: CustomSlider!
+    
     override func viewDidLoad() {
+        navigationController?.navigationBar.isHidden = false
         initView()
         super.viewDidLoad()
 
@@ -27,7 +31,12 @@ class CustomVoiceViewController: UIViewController {
 }
 extension CustomVoiceViewController{
     func initView(){
-        buttonBack.layer.cornerRadius = 10
-        buttonSaveAndShare.layer.cornerRadius = 10
+       // buttonBack.layer.cornerRadius = 10
+       // buttonSaveAndShare.layer.cornerRadius = 10
+        sliderAmplyfy.setThumbImage(UIImage(named: "heart.png"), for: UIControlState.normal)
+        sliderExtraction.setThumbImage(UIImage(named: "heart.png"), for: UIControlState.normal)
+        sliderCrystallize.setThumbImage(UIImage(named: "heart.png"), for: UIControlState.normal)
+        silderDepth.setThumbImage(UIImage(named: "heart.png"), for: UIControlState.normal)
+        
     }
     }

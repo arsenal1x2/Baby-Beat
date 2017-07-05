@@ -1,131 +1,40 @@
 //
-//  HomeViewController.swift
+//  ViewController.swift
 //  Baby Beat
 //
-//  Created by may985 on 7/3/17.
+//  Created by may985 on 7/5/17.
 //  Copyright © 2017 may985. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-    
-    @IBOutlet weak var viewTutorial: UIView!
+class ViewController: UIViewController {
+
+    @IBOutlet weak var view1: UIView!
     @IBOutlet weak var uiscrollview: UIScrollView!
-    var WaveAnimationView:UIView!
-    @IBOutlet weak var background: UIImageView!
-    var nonObservablePropertiesUpdateTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
-    var isRecording = false
-   
-    @IBOutlet weak var buttontabToRecord: UIButton!
-    
-   // var viewTutorial:UIView!
-    
-   // @IBOutlet weak var viewTutorial: UIView!
-    @IBOutlet weak var buttonMyRecord: UIButton!
-    @IBOutlet weak var buttonHowToRecord: UIButton!
-    var listRecorted:[String] = [String]()
     override func viewDidLoad() {
-        initView()
-        // initViewTutorial()
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
     override func viewDidLayoutSubviews() {
-        self.navigationController?.navigationBar.isHidden = true
-        addScrollView()
-        
-       // initViewTutorial()
-    }
-    
-    @IBOutlet weak var imageBackground: UIImageView!
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    @IBAction func tabToRecord(_ sender: Any) {
-        
-       moveToChageVoice()
-    }
-    @IBOutlet weak var viewTabbar: UIView!
-    
-    @IBAction func closeViewTutorial(_ sender: Any) {
-        setView(view: viewTutorial, hidden: true)
-        setView(view: imageBackground, hidden: false)
-        setView(view: viewTabbar, hidden: false)
-    }
-    
-    @IBAction func showTutorialView(_ sender: Any) {
-        setView(view: viewTutorial, hidden: false)
-        setView(view: imageBackground, hidden: true)
-        setView(view: viewTabbar, hidden: true)
-    }
-    @IBAction func showMyRecord(_ sender: Any) {
-        if(listRecorted.count == 0){
-            let alert:UIAlertController = UIAlertController(title: "MyRecordings folder is empty!", message: "", preferredStyle: .alert)
-            let buttonOk:UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(buttonOk)
-            self.present(alert, animated: true, completion: nil)
-        }else{
-            showListMyRecord()
-        }
-    }
-}
-extension HomeViewController{
-    
-    
-    // init and custom interface
-   func initView(){
-        buttonMyRecord.layer.cornerRadius =  17
-        buttonHowToRecord.layer.cornerRadius = 17
-    viewTutorial.isHidden = true
-        // animation button Tab to record
-       UIView.animate(withDuration: 1, delay: 0.1, options: [.repeat,.allowUserInteraction], animations: {
-                self.buttontabToRecord.transform = CGAffineTransform.identity.scaledBy(x: 0.6, y: 0.6)
-            }, completion: { (finish) in
-                UIView.animate(withDuration: 0.6, animations: {
-                self.buttontabToRecord.transform = CGAffineTransform.identity
-                })
-        })
-    
-   }
-    //Set animation show and hide once view
-    func setView(view: UIView, hidden: Bool) {
-        UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: { _ in
-            view.isHidden = hidden
-        }, completion: nil)
-    }
-    func showListMyRecord(){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "secondViewController") as! CustomVoiceViewController
-        self.present(vc,animated: true, completion: nil)
-       
-    }
-    func moveToChageVoice(){
-       // self.navigationController?.pushViewController(vc, animated: true)
-        let vc = storyboard?.instantiateViewController(withIdentifier: "secondViewController") as! CustomVoiceViewController
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    func addScrollView(){
-        let imageWidth:CGFloat = self.view.frame.size.width
+        let imageWidth:CGFloat = view1.frame.width - 10
         let imageHeight:CGFloat = 147
-        var yPosition:CGFloat = uiscrollview.bounds.origin.y
+        var yPosition:CGFloat = 0
         var scrollViewContentSize:CGFloat=0
         let spacer:CGFloat = 8
         let label:UILabel = UILabel()
-        
+       
         label.font = UIFont(name: "Futura-Bold", size: 12)
         
-        //  let font = UIFont
+      //  let font = UIFont
         let label2:UILabel = UILabel()
         label2.font = UIFont(name: "Futura-Bold", size: 12)
         
         //label2.font = UIFont(name: UIFont.fontNames(forFamilyName: "Futara")[2], size: 14)
         let label3:UILabel = UILabel()
-        label3.font = UIFont(name: "Futura-Bold", size: 12)
+       label3.font = UIFont(name: "Futura-Bold", size: 12)
         let label4:UILabel = UILabel()
         label4.font = UIFont(name: "Futura-Bold", size: 12)
         let label5:UILabel = UILabel()
@@ -144,7 +53,7 @@ extension HomeViewController{
         scrollViewContentSize += 90 + spacer
         yPosition += 50 + spacer
         
-       uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
+        uiscrollview.contentSize = CGSize(width: imageWidth, height: scrollViewContentSize)
         // add label 2
         label2.text = "To record place you iPhone as shown in the picture, gently press on belly and tap button to start recording. When you want to finish recording tap again to stop recording"
         label2.frame.size.width = imageWidth
@@ -158,7 +67,7 @@ extension HomeViewController{
         
         scrollViewContentSize += imageHeight + 10 - 20
         yPosition += imageHeight + 10 - 20
-        uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
+        uiscrollview.contentSize = CGSize(width: imageWidth, height: scrollViewContentSize)
         // add image view
         let myImage:UIImage = UIImage(named: "baby.png")!
         let myImageView:UIImageView = UIImageView()
@@ -172,7 +81,7 @@ extension HomeViewController{
         
         yPosition += imageHeight + spacer - 20
         scrollViewContentSize += imageHeight +  spacer - 20
-        uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
+        uiscrollview.contentSize = CGSize(width: imageWidth, height: scrollViewContentSize)
         //add label 3
         label3.text = "if you don't hear your baby heart beat try other positions."
         label3.frame.size.width = imageWidth
@@ -186,7 +95,7 @@ extension HomeViewController{
         
         scrollViewContentSize += imageHeight + 10 - 20
         yPosition += 100 + 10 - 20
-        uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
+        uiscrollview.contentSize = CGSize(width: imageWidth, height: scrollViewContentSize)
         //add image 1
         let myImage1:UIImage = UIImage(named: "born.png")!
         let myImageView1:UIImageView = UIImageView()
@@ -200,11 +109,11 @@ extension HomeViewController{
         
         yPosition += 350 + spacer - 20
         scrollViewContentSize += imageHeight +  spacer - 20
-        uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
+        uiscrollview.contentSize = CGSize(width: imageWidth, height: scrollViewContentSize)
         //add label 4
         label4.text = "If you still can't hear your baby heartbeat don't worry it doesn't mean anything is wrong with your baby. Wait for someday and try again to record."
         label4.frame.size.width = imageWidth
-        label4.frame.size.height = 120
+        label4.frame.size.height = imageHeight
         label4.numberOfLines = 0
         label4.textAlignment = .center
         label4.textColor = UIColor.white
@@ -212,9 +121,9 @@ extension HomeViewController{
         label4.frame.origin.y = yPosition
         uiscrollview.addSubview(label4)
         
-        scrollViewContentSize += 40
-        yPosition += 40
-        uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
+        scrollViewContentSize += 100 + 10
+        yPosition += 100 + 10
+        uiscrollview.contentSize = CGSize(width: imageWidth, height: scrollViewContentSize)
         //add label 5
         label5.text = "You can also try to record your hearbeat."
         label5.frame.size.width = imageWidth
@@ -226,9 +135,26 @@ extension HomeViewController{
         label5.frame.origin.y = yPosition
         uiscrollview.addSubview(label5)
         
-        scrollViewContentSize += 140
-        yPosition += 140
-        uiscrollview.contentSize = CGSize(width: imageWidth+10, height: scrollViewContentSize)
-    
+       scrollViewContentSize += 100
+        yPosition += 100
+        uiscrollview.contentSize = CGSize(width: imageWidth, height: scrollViewContentSize)
+
+        
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
