@@ -21,7 +21,7 @@ class CustomVoiceViewController: UIViewController {
     @IBOutlet weak var sliderCrystallize: CustomSlider!
     
     override func viewDidLoad() {
-        let jeremyGif = UIImage.gifImageWithName("like")
+        let jeremyGif = UIImage.gifImageWithName("tumblr_mi4xstZpvi1rfsim9o4_500")
         imageView.image = jeremyGif
         //imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
         //view.addSubview(imageView)

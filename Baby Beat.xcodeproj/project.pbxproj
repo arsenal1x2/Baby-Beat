@@ -33,6 +33,7 @@
 		86BE31401F0C7F8E0011AD7A /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */; };
 		86BE31441F0C89AA0011AD7A /* 19859149_695186967331126_1541081074_o.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31431F0C89A90011AD7A /* 19859149_695186967331126_1541081074_o.png */; };
 		86C5F63A1F0CF17600B92146 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5F6391F0CF17600B92146 /* iOSDevCenters+GIF.swift */; };
+		86C5F63C1F0CF8D100B92146 /* tumblr_mi4xstZpvi1rfsim9o4_500.gif in Resources */ = {isa = PBXBuildFile; fileRef = 86C5F63B1F0CF8D100B92146 /* tumblr_mi4xstZpvi1rfsim9o4_500.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		86BE31431F0C89A90011AD7A /* 19859149_695186967331126_1541081074_o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19859149_695186967331126_1541081074_o.png; sourceTree = "<group>"; };
 		86C5F6391F0CF17600B92146 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		86C5F63B1F0CF8D100B92146 /* tumblr_mi4xstZpvi1rfsim9o4_500.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tumblr_mi4xstZpvi1rfsim9o4_500.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				86BE31251F0C794E0011AD7A /* heart.png */,
 				86BE31261F0C794E0011AD7A /* howtorecord.png */,
 				86BE31271F0C794E0011AD7A /* like.gif */,
+				86C5F63B1F0CF8D100B92146 /* tumblr_mi4xstZpvi1rfsim9o4_500.gif */,
 				86BE31281F0C794E0011AD7A /* logo.png */,
 				86BE313C1F0C7B360011AD7A /* resettodefault.png */,
 				86BE31291F0C794E0011AD7A /* mom.png */,
@@ -238,6 +241,7 @@
 				86BE31341F0C794E0011AD7A /* howtorecord.png in Resources */,
 				86BE31311F0C794E0011AD7A /* backgroundtabbar.png in Resources */,
 				86BE31351F0C794E0011AD7A /* like.gif in Resources */,
+				86C5F63C1F0CF8D100B92146 /* tumblr_mi4xstZpvi1rfsim9o4_500.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
