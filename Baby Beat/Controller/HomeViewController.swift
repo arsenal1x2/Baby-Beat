@@ -9,23 +9,22 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
-    @IBOutlet weak var viewTutorial: UIView!
     @IBOutlet weak var uiscrollview: UIScrollView!
-    var WaveAnimationView:UIView!
-    @IBOutlet weak var background: UIImageView!
-    var nonObservablePropertiesUpdateTimer = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
-    var isRecording = false
-   
-    @IBOutlet weak var buttontabToRecord: UIButton!
     
-   // var viewTutorial:UIView!
-    
-   // @IBOutlet weak var viewTutorial: UIView!
-    @IBOutlet weak var buttonMyRecord: UIButton!
     @IBOutlet weak var buttonHowToRecord: UIButton!
+    @IBOutlet weak var buttonMyRecord: UIButton!
+    @IBOutlet weak var viewTutorial: UIView!
+  
+    @IBAction func closeViewTutorial(_ sender: Any) {
+    }
+    @IBOutlet weak var buttontabToRecord: UIButton!
+  
+    @IBOutlet weak var superView: UIView!
+    //var WaveAnimationView:UIView!
+    
     var listRecorted:[String] = [String]()
     override func viewDidLoad() {
+         self.navigationController?.navigationBar.isHidden = true
         initView()
         // initViewTutorial()
         super.viewDidLoad()
@@ -38,6 +37,10 @@ class HomeViewController: UIViewController {
         addScrollView()
         
        // initViewTutorial()
+    }
+    @IBAction func showTutorialView(_ sender: Any) {
+        setView(view: superView, hidden: true)
+        setView(view: viewTutorial, hidden: false)
     }
     
     @IBOutlet weak var imageBackground: UIImageView!
@@ -53,17 +56,9 @@ class HomeViewController: UIViewController {
     }
     @IBOutlet weak var viewTabbar: UIView!
     
-    @IBAction func closeViewTutorial(_ sender: Any) {
-        setView(view: viewTutorial, hidden: true)
-        setView(view: imageBackground, hidden: false)
-        setView(view: viewTabbar, hidden: false)
-    }
     
-    @IBAction func showTutorialView(_ sender: Any) {
-        setView(view: viewTutorial, hidden: false)
-        setView(view: imageBackground, hidden: true)
-        setView(view: viewTabbar, hidden: true)
-    }
+    
+  
     @IBAction func showMyRecord(_ sender: Any) {
         if(listRecorted.count == 0){
             let alert:UIAlertController = UIAlertController(title: "MyRecordings folder is empty!", message: "", preferredStyle: .alert)
