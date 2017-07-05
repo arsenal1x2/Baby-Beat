@@ -341,6 +341,12 @@
                                     <constraint firstAttribute="bottom" secondItem="2dw-ZF-2lu" secondAttribute="bottom" id="p1Z-lq-DlE"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jcR-dR-ZU1">
+                                <rect key="frame" x="0.0" y="61" width="414" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Ufy-i7-1sT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -360,10 +366,12 @@
                             <constraint firstItem="xA3-ci-gi0" firstAttribute="leading" secondItem="get-rd-OS0" secondAttribute="leadingMargin" id="QXy-Yq-jD8"/>
                             <constraint firstItem="HMs-9N-Di7" firstAttribute="top" secondItem="get-rd-OS0" secondAttribute="top" id="RCU-QA-so4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GLr-X3-O4L" secondAttribute="trailing" constant="86" id="S58-1X-Ci7"/>
+                            <constraint firstItem="jcR-dR-ZU1" firstAttribute="top" secondItem="HMs-9N-Di7" secondAttribute="bottom" id="SNp-ge-RBm"/>
                             <constraint firstItem="ZxO-Jo-Lgm" firstAttribute="leading" secondItem="get-rd-OS0" secondAttribute="leadingMargin" id="SOu-26-lmd"/>
                             <constraint firstItem="956-kq-FB9" firstAttribute="leading" secondItem="get-rd-OS0" secondAttribute="leadingMargin" id="Sfb-5x-9oi"/>
                             <constraint firstItem="xA3-ci-gi0" firstAttribute="top" secondItem="WRD-Oq-uYZ" secondAttribute="bottom" constant="24" id="UDD-Ql-eWF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qcw-Rl-MP1" secondAttribute="trailing" constant="32" id="Wt9-aj-6Qr"/>
+                            <constraint firstItem="jcR-dR-ZU1" firstAttribute="leading" secondItem="get-rd-OS0" secondAttribute="leading" id="ZcC-d0-b6G"/>
                             <constraint firstItem="Sk4-wF-3DA" firstAttribute="top" secondItem="1Ew-OY-11L" secondAttribute="bottom" constant="116" id="Znr-gH-uwX"/>
                             <constraint firstItem="WRD-Oq-uYZ" firstAttribute="leading" secondItem="get-rd-OS0" secondAttribute="leadingMargin" id="atL-DA-xak"/>
                             <constraint firstItem="HMs-9N-Di7" firstAttribute="leading" secondItem="get-rd-OS0" secondAttribute="leading" id="c06-nk-lcO"/>
@@ -374,10 +382,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZxO-Jo-Lgm" secondAttribute="trailing" constant="32" id="nMH-dZ-6lc"/>
                             <constraint firstItem="1m0-Y7-dMX" firstAttribute="leading" secondItem="get-rd-OS0" secondAttribute="leading" id="oBm-eD-MlU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hG5-Jp-1hh" secondAttribute="trailing" constant="32" id="qhN-fO-9So"/>
+                            <constraint firstAttribute="trailing" secondItem="jcR-dR-ZU1" secondAttribute="trailing" id="sn8-Zp-d6P"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
+                        <outlet property="imageView" destination="jcR-dR-ZU1" id="0cS-VW-bm8"/>
                         <outlet property="silderDepth" destination="Qcw-Rl-MP1" id="wMO-Ew-LV0"/>
                         <outlet property="sliderAmplyfy" destination="WRD-Oq-uYZ" id="DAA-6Z-0lb"/>
                         <outlet property="sliderCrystallize" destination="hG5-Jp-1hh" id="eKl-gO-DOO"/>
@@ -386,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0X-34-mNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864.375" y="120.4225352112676"/>
+            <point key="canvasLocation" x="863.768115942029" y="119.83695652173914"/>
         </scene>
     </scenes>
     <resources>

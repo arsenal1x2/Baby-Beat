@@ -12,6 +12,7 @@ import UIKit
 class CustomVoiceViewController: UIViewController {
     @IBOutlet weak var silderDepth: CustomSlider!
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -20,6 +21,10 @@ class CustomVoiceViewController: UIViewController {
     @IBOutlet weak var sliderCrystallize: CustomSlider!
     
     override func viewDidLoad() {
+        let jeremyGif = UIImage.gifImageWithName("like")
+        imageView.image = jeremyGif
+        //imageView.frame = CGRect(x: 20.0, y: 50.0, width: self.view.frame.size.width - 40, height: 150.0)
+        //view.addSubview(imageView)
         navigationController?.navigationBar.isHidden = false
         initView()
         super.viewDidLoad()

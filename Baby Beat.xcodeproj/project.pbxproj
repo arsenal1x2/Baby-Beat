@@ -32,6 +32,7 @@
 		86BE313D1F0C7B360011AD7A /* resettodefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE313C1F0C7B360011AD7A /* resettodefault.png */; };
 		86BE31401F0C7F8E0011AD7A /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */; };
 		86BE31441F0C89AA0011AD7A /* 19859149_695186967331126_1541081074_o.png in Resources */ = {isa = PBXBuildFile; fileRef = 86BE31431F0C89A90011AD7A /* 19859149_695186967331126_1541081074_o.png */; };
+		86C5F63A1F0CF17600B92146 /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C5F6391F0CF17600B92146 /* iOSDevCenters+GIF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		86BE313C1F0C7B360011AD7A /* resettodefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resettodefault.png; sourceTree = "<group>"; };
 		86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUIColor.swift; sourceTree = "<group>"; };
 		86BE31431F0C89A90011AD7A /* 19859149_695186967331126_1541081074_o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19859149_695186967331126_1541081074_o.png; sourceTree = "<group>"; };
+		86C5F6391F0CF17600B92146 /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */,
+				86C5F6391F0CF17600B92146 /* iOSDevCenters+GIF.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				86979BE01F0A013900F0E5B3 /* ViewTutorial.swift in Sources */,
 				86BE31401F0C7F8E0011AD7A /* ExtensionUIColor.swift in Sources */,
 				86979BE61F0A360D00F0E5B3 /* CustomSlider.swift in Sources */,
+				86C5F63A1F0CF17600B92146 /* iOSDevCenters+GIF.swift in Sources */,
 				86979BAE1F09D7EA00F0E5B3 /* AppDelegate.swift in Sources */,
 				86979BE41F0A2BEF00F0E5B3 /* CustomVoiceViewController.swift in Sources */,
 				86979BC11F09D92300F0E5B3 /* HomeViewController.swift in Sources */,
