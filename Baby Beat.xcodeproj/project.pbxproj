@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		865B695C1F0F3EC000EB3AD8 /* ListRecoredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B695B1F0F3EC000EB3AD8 /* ListRecoredViewController.swift */; };
 		865B695E1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B695D1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift */; };
+		865B69611F0F90DF00EB3AD8 /* stop @2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 865B695F1F0F90DF00EB3AD8 /* stop @2x.png */; };
+		865B69621F0F90DF00EB3AD8 /* stop @3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 865B69601F0F90DF00EB3AD8 /* stop @3x.png */; };
 		86979BAE1F09D7EA00F0E5B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979BAD1F09D7EA00F0E5B3 /* AppDelegate.swift */; };
 		86979BB51F09D7EA00F0E5B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86979BB41F09D7EA00F0E5B3 /* Assets.xcassets */; };
 		86979BB81F09D7EA00F0E5B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86979BB61F09D7EA00F0E5B3 /* LaunchScreen.storyboard */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		865B695B1F0F3EC000EB3AD8 /* ListRecoredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecoredViewController.swift; sourceTree = "<group>"; };
 		865B695D1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		865B695F1F0F90DF00EB3AD8 /* stop @2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop @2x.png"; sourceTree = "<group>"; };
+		865B69601F0F90DF00EB3AD8 /* stop @3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop @3x.png"; sourceTree = "<group>"; };
 		86979BAA1F09D7EA00F0E5B3 /* Baby Beat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Beat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86979BAD1F09D7EA00F0E5B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86979BB41F09D7EA00F0E5B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				86BE31241F0C794E0011AD7A /* born.png */,
 				86BE31251F0C794E0011AD7A /* heart.png */,
 				86BE31261F0C794E0011AD7A /* howtorecord.png */,
+				865B695F1F0F90DF00EB3AD8 /* stop @2x.png */,
+				865B69601F0F90DF00EB3AD8 /* stop @3x.png */,
 				86BE31271F0C794E0011AD7A /* like.gif */,
 				86C5F63B1F0CF8D100B92146 /* tumblr_mi4xstZpvi1rfsim9o4_500.gif */,
 				86BE31281F0C794E0011AD7A /* logo.png */,
@@ -228,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865B69611F0F90DF00EB3AD8 /* stop @2x.png in Resources */,
 				86BE31441F0C89AA0011AD7A /* 19859149_695186967331126_1541081074_o.png in Resources */,
 				86BE313D1F0C7B360011AD7A /* resettodefault.png in Resources */,
 				86979BB81F09D7EA00F0E5B3 /* LaunchScreen.storyboard in Resources */,
@@ -243,6 +250,7 @@
 				86BE31391F0C794E0011AD7A /* saveandshare.png in Resources */,
 				86979BE81F0A3E8800F0E5B3 /* Main.storyboard in Resources */,
 				86BE313A1F0C794E0011AD7A /* tabtorecord.png in Resources */,
+				865B69621F0F90DF00EB3AD8 /* stop @3x.png in Resources */,
 				86BE31361F0C794E0011AD7A /* logo.png in Resources */,
 				86BE31341F0C794E0011AD7A /* howtorecord.png in Resources */,
 				86BE31311F0C794E0011AD7A /* backgroundtabbar.png in Resources */,

@@ -42,6 +42,7 @@ class HomeViewController: UIViewController,AVAudioRecorderDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
         initView()
+        addScrollView()
     }
     override func viewDidLoad() {
         setSessionPlayback()
@@ -54,7 +55,7 @@ class HomeViewController: UIViewController,AVAudioRecorderDelegate {
     
     override func viewDidLayoutSubviews() {
         self.navigationController?.navigationBar.isHidden = true
-        addScrollView()
+       // addScrollView()
     }
     @IBOutlet weak var imageBackground: UIImageView!
     override func didReceiveMemoryWarning() {
@@ -72,9 +73,7 @@ class HomeViewController: UIViewController,AVAudioRecorderDelegate {
             showListMyRecord()
         //}
     }
-    override func viewDidDisappear(_ animated: Bool) {
-        initView()
-    }
+    
 }
 extension HomeViewController{
     

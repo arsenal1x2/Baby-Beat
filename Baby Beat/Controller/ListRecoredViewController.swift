@@ -61,21 +61,19 @@ extension ListRecoredViewController{
          cell.buttonDelete.addTarget(self, action: #selector(ListRecoredViewController.askToDelete(_:)), for: UIControlEvents.touchUpInside)
         cell.buttonPlay.tag = indexPath.row
         cell.buttonPlay.addTarget(self, action: #selector(ListRecoredViewController.playBack(sender:)), for: UIControlEvents.touchUpInside)
-        
-        return cell
+                return cell
     }
     
     func playBack(sender:UIButton!) {
         if(isPlaying){
             player.stop()
-            sender.setBackgroundImage(UIImage(named:"play-button (2)"), for: .normal)
-            
-            isPlaying = false
+           sender.setBackgroundImage(UIImage(named:"play-button (2)"), for: .normal)
+          isPlaying = false
             print("stop")
         }else{
           play(recordings[sender.tag])
-            sender.setBackgroundImage(UIImage(named:"stop"), for: .normal)
-            recordTableView.reloadData()
+          sender.setBackgroundImage(UIImage(named:"stop "), for: .normal)
+           //recordTableView.reloadData()
             isPlaying = true
             print("play")
         }
@@ -104,7 +102,7 @@ extension ListRecoredViewController{
         
         print(sender.tag)
         let alert = UIAlertController(title: "Delete",
-                                      message: "Delete Recording \(recordings[sender.tag].lastPathComponent)?",
+                                      message: "Delete \(recordings[sender.tag].lastPathComponent)?",
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: {action in
             print("yes was tapped \(self.recordings[sender.tag])")
