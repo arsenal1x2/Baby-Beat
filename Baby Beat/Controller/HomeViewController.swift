@@ -7,14 +7,21 @@
 //
 
 import UIKit
-
-class HomeViewController: UIViewController {
+import AVFoundation
+class HomeViewController: UIViewController,AVAudioRecorderDelegate {
+    @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var uiscrollview: UIScrollView!
     @IBOutlet weak var buttonHowToRecord: UIButton!
+    @IBOutlet weak var labelRecording: UILabel!
     @IBOutlet weak var buttonMyRecord: UIButton!
     @IBOutlet weak var viewTutorial: UIView!
     @IBOutlet weak var buttontabToRecord: UIButton!
     @IBOutlet weak var superView: UIView!
+    var recorder: AVAudioRecorder!
+    var player:AVAudioPlayer!
+    var meterTimer:Timer!
+    var soundFileURL:URL!
+    var isRecording:Bool = false
     var listRecorted:[String] = [String]()
     @IBAction func showViewTutorial(_ sender: Any) {
         setView(view: superView, hidden: true)
@@ -25,12 +32,22 @@ class HomeViewController: UIViewController {
         setView(view: viewTutorial, hidden: true)
     }
     @IBAction func tabToRecord(_ sender: Any) {
-        moveToChageVoice()
+        if(isRecording){
+           stopRecord()
+           moveToChageVoice()
+        }else{
+          record()
+        }
+        
     }
-   
-    override func viewDidLoad() {
-         self.navigationController?.navigationBar.isHidden = true
+    override func viewWillAppear(_ animated: Bool) {
         initView()
+    }
+    override func viewDidLoad() {
+        setSessionPlayback()
+        askForNotifications()
+        checkHeadphones()
+        
         
         super.viewDidLoad()
     }
@@ -46,17 +63,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func showMyRecorded(_ sender: Any) {
-        if(listRecorted.count == 0){
-            let alert:UIAlertController = UIAlertController(title: "MyRecordings folder is empty!", message: "", preferredStyle: .alert)
-            let buttonOk:UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(buttonOk)
-            self.present(alert, animated: true, completion: nil)
-        }else{
+//        if(listRecorted.count == 0){
+//            let alert:UIAlertController = UIAlertController(title: "MyRecordings folder is empty!", message: "", preferredStyle: .alert)
+//            let buttonOk:UIAlertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//            alert.addAction(buttonOk)
+//            self.present(alert, animated: true, completion: nil)
+//        }else{
             showListMyRecord()
-        }
+        //}
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewDidDisappear(_ animated: Bool) {
         initView()
     }
 }
@@ -85,7 +101,7 @@ extension HomeViewController{
         }, completion: nil)
     }
     func showListMyRecord(){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "secondViewController") as! CustomVoiceViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "listRecored") as! ListRecoredViewController
         self.present(vc,animated: true, completion: nil)
        
     }
@@ -217,3 +233,247 @@ extension HomeViewController{
     
     }
 }
+extension HomeViewController{
+    func stopRecord(){
+        labelTime.isHidden = true
+        labelRecording.isHidden = true
+        isRecording = false
+        buttontabToRecord.setBackgroundImage(UIImage(named:"tabtorecord.png"), for: .normal)
+        recorder?.stop()
+        player?.stop()
+        
+        meterTimer.invalidate()
+        
+        
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setActive(false)
+            
+        } catch {
+            print("could not make session inactive")
+            print(error.localizedDescription)
+        }
+
+        moveToChageVoice()
+    
+    }
+    func record(){
+       labelTime.isHidden = false
+       labelRecording.isHidden = false
+        isRecording = true
+        recordWithPermission(true)
+        buttontabToRecord.setBackgroundImage(UIImage(named:"taptostop.png"), for: .normal)
+    }
+    func setSessionPlayback() {
+        print("\(#function)")
+        
+        let session = AVAudioSession.sharedInstance()
+        
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayback, with: .defaultToSpeaker)
+            
+        } catch {
+            print("could not set session category")
+            print(error.localizedDescription)
+        }
+        
+        do {
+            try session.setActive(true)
+        } catch {
+            print("could not make session active")
+            print(error.localizedDescription)
+        }
+    }
+    
+    func setSessionPlayAndRecord() {
+        print("\(#function)")
+        
+        let session = AVAudioSession.sharedInstance()
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayAndRecord, with: .defaultToSpeaker)
+        } catch {
+            print("could not set session category")
+            print(error.localizedDescription)
+        }
+        
+        do {
+            try session.setActive(true)
+        } catch {
+            print("could not make session active")
+            print(error.localizedDescription)
+        }
+    }
+    func checkHeadphones() {
+        print("\(#function)")
+        
+        // check NewDeviceAvailable and OldDeviceUnavailable for them being plugged in/unplugged
+        let currentRoute = AVAudioSession.sharedInstance().currentRoute
+        if currentRoute.outputs.count > 0 {
+            for description in currentRoute.outputs {
+                if description.portType == AVAudioSessionPortHeadphones {
+                    print("headphones are plugged in")
+                    break
+                } else {
+                    print("headphones are unplugged")
+                }
+            }
+        } else {
+            print("checking headphones requires a connection to a device")
+        }
+    }
+}
+extension HomeViewController{
+    func askForNotifications() {
+        print("\(#function)")
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(HomeViewController.background(_:)),
+                                               name:NSNotification.Name.UIApplicationWillResignActive,
+                                               object:nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(HomeViewController.foreground(_:)),
+                                               name:NSNotification.Name.UIApplicationWillEnterForeground,
+                                               object:nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector:#selector(HomeViewController.routeChange(_:)),
+                                               name:NSNotification.Name.AVAudioSessionRouteChange,
+                                               object:nil)
+    }
+    
+    func background(_ notification:Notification) {
+        print("\(#function)")
+        
+    }
+    
+    func foreground(_ notification:Notification) {
+        print("\(#function)")
+        
+    }
+    
+    
+    func routeChange(_ notification:Notification) {
+        print("\(#function)")
+        
+        if let userInfo = (notification as NSNotification).userInfo {
+            print("routeChange \(userInfo)")
+            
+            //print("userInfo \(userInfo)")
+            if let reason = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt {
+                //print("reason \(reason)")
+                switch AVAudioSessionRouteChangeReason(rawValue: reason)! {
+                case AVAudioSessionRouteChangeReason.newDeviceAvailable:
+                    print("NewDeviceAvailable")
+                    print("did you plug in headphones?")
+                    checkHeadphones()
+                case AVAudioSessionRouteChangeReason.oldDeviceUnavailable:
+                    print("OldDeviceUnavailable")
+                    print("did you unplug headphones?")
+                    checkHeadphones()
+                case AVAudioSessionRouteChangeReason.categoryChange:
+                    print("CategoryChange")
+                case AVAudioSessionRouteChangeReason.override:
+                    print("Override")
+                case AVAudioSessionRouteChangeReason.wakeFromSleep:
+                    print("WakeFromSleep")
+                case AVAudioSessionRouteChangeReason.unknown:
+                    print("Unknown")
+                case AVAudioSessionRouteChangeReason.noSuitableRouteForCategory:
+                    print("NoSuitableRouteForCategory")
+                case AVAudioSessionRouteChangeReason.routeConfigurationChange:
+                    print("RouteConfigurationChange")
+                    
+                }
+            }
+        }
+    }
+    func recordWithPermission(_ setup:Bool) {
+        print("\(#function)")
+        
+        AVAudioSession.sharedInstance().requestRecordPermission() {
+            [unowned self] granted in
+            if granted {
+                
+                DispatchQueue.main.async {
+                    print("Permission to record granted")
+                    self.setSessionPlayAndRecord()
+                    if setup {
+                        self.setupRecorder()
+                    }
+                    self.recorder.record()
+                    
+                    self.meterTimer = Timer.scheduledTimer(timeInterval: 0.1,
+                                                           target:self,
+                                                           selector:#selector(self.updateAudioMeter(_:)),
+                                                           userInfo:nil,
+                                                           repeats:true)
+                }
+            } else {
+                print("Permission to record not granted")
+            }
+        }
+        
+        if AVAudioSession.sharedInstance().recordPermission() == .denied {
+            print("permission denied")
+        }
+    }
+    func setupRecorder() {
+        print("\(#function)")
+        
+        let format = DateFormatter()
+        format.dateFormat="yyyy-MM-dd-HH-mm-ss"
+        let currentFileName = "Recording \(format.string(from: Date())).m4a"
+        print(currentFileName)
+        
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        self.soundFileURL = documentsDirectory.appendingPathComponent(currentFileName)
+        print("writing to soundfile url: '\(soundFileURL!)'")
+        
+        if FileManager.default.fileExists(atPath: soundFileURL.absoluteString) {
+            // probably won't happen. want to do something about it?
+            print("soundfile \(soundFileURL.absoluteString) exists")
+        }
+        
+        let recordSettings:[String : Any] = [
+            AVFormatIDKey:             kAudioFormatAppleLossless,
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue,
+            AVEncoderBitRateKey :      32000,
+            AVNumberOfChannelsKey:     2,
+            AVSampleRateKey :          44100.0
+        ]
+        
+        
+        do {
+            recorder = try AVAudioRecorder(url: soundFileURL, settings: recordSettings)
+            recorder.delegate = self
+            recorder.isMeteringEnabled = true
+            recorder.prepareToRecord() // creates/overwrites the file at soundFileURL
+        } catch {
+            recorder = nil
+            print(error.localizedDescription)
+        }
+        
+    }
+    func updateAudioMeter(_ timer:Timer) {
+        
+        if let recorder = self.recorder {
+            if recorder.isRecording {
+                let min = Int(recorder.currentTime / 60)
+                let sec = Int(recorder.currentTime.truncatingRemainder(dividingBy: 60))
+                let s = String(format: "%02d:%02d", min, sec)
+                labelTime.text = s
+                recorder.updateMeters()
+                // if you want to draw some graphics...
+                //var apc0 = recorder.averagePowerForChannel(0)
+                //var peak0 = recorder.peakPowerForChannel(0)
+            }
+        }
+    }
+
+
+
+}
+
+
+

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		865B695C1F0F3EC000EB3AD8 /* ListRecoredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B695B1F0F3EC000EB3AD8 /* ListRecoredViewController.swift */; };
+		865B695E1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B695D1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift */; };
 		86979BAE1F09D7EA00F0E5B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86979BAD1F09D7EA00F0E5B3 /* AppDelegate.swift */; };
 		86979BB51F09D7EA00F0E5B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86979BB41F09D7EA00F0E5B3 /* Assets.xcassets */; };
 		86979BB81F09D7EA00F0E5B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86979BB61F09D7EA00F0E5B3 /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		865B695B1F0F3EC000EB3AD8 /* ListRecoredViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListRecoredViewController.swift; sourceTree = "<group>"; };
+		865B695D1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		86979BAA1F09D7EA00F0E5B3 /* Baby Beat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Baby Beat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86979BAD1F09D7EA00F0E5B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86979BB41F09D7EA00F0E5B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			children = (
 				86979BC01F09D92300F0E5B3 /* HomeViewController.swift */,
 				86979BE31F0A2BEF00F0E5B3 /* CustomVoiceViewController.swift */,
+				865B695B1F0F3EC000EB3AD8 /* ListRecoredViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 			children = (
 				86BE313F1F0C7F8E0011AD7A /* ExtensionUIColor.swift */,
 				86C5F6391F0CF17600B92146 /* iOSDevCenters+GIF.swift */,
+				865B695D1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -253,6 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86979BE01F0A013900F0E5B3 /* ViewTutorial.swift in Sources */,
+				865B695C1F0F3EC000EB3AD8 /* ListRecoredViewController.swift in Sources */,
+				865B695E1F0F3F0C00EB3AD8 /* RecordTableViewCell.swift in Sources */,
 				86BE31401F0C7F8E0011AD7A /* ExtensionUIColor.swift in Sources */,
 				86979BE61F0A360D00F0E5B3 /* CustomSlider.swift in Sources */,
 				86C5F63A1F0CF17600B92146 /* iOSDevCenters+GIF.swift in Sources */,
